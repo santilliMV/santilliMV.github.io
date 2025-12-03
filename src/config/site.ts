@@ -1,8 +1,8 @@
 // Site-wide configuration
 export const siteConfig = {
   // Site metadata
-  name: "WordPress Gatsby Blog",
-  title: "WordPress Gatsby Blog",
+  name: "Astro Blog",
+  title: "Astro Blog",
   description: "A modern blog built with Astro",
   
   // Navigation
@@ -24,10 +24,10 @@ export const siteConfig = {
       contactMe: "Contact Me",
     },
     socialLinks: [
-      { name: "Twitter", icon: "/svg/twitter.svg", url: "#" },
+      { name: "Twitter", icon: "/svg/twitter.svg", url: "https://x.com/astrodotbuild" },
       { name: "LinkedIn", icon: "/svg/linkedin.svg", url: "#" },
       { name: "Facebook", icon: "/svg/facebook.svg", url: "#" },
-      { name: "GitHub", icon: "/svg/github.svg", url: "#" },
+      { name: "GitHub", icon: "/svg/github.svg", url: "https://github.com/tomcomtang/astro-cartoon-portfolio" },
     ],
   },
   
@@ -60,10 +60,10 @@ export const siteConfig = {
     followMe: {
       title: "Follow Me",
       links: [
-        { name: "Twitter", icon: "/svg/twitter.svg", url: "https://x.com/TencentCloudEO" },
+        { name: "Twitter", icon: "/svg/twitter.svg", url: "https://x.com/astrodotbuild" },
         { name: "LinkedIn", icon: "/svg/linkedin.svg", url: "https://www.linkedin.com/company/tencentedgeone" },
         { name: "Facebook", icon: "/svg/facebook.svg", url: "https://facebook.com/your_facebook" },
-        { name: "GitHub", icon: "/svg/github.svg", url: "https://github.com/TencentEdgeOne" },
+        { name: "GitHub", icon: "/svg/github.svg", url: "https://github.com/tomcomtang/astro-cartoon-portfolio" },
       ],
     },
     footerText: [
@@ -83,7 +83,7 @@ export const siteConfig = {
     ],
     github: {
       text: "Star this project on Github",
-      url: "#",
+      url: "https://github.com/tomcomtang/astro-cartoon-portfolio",
     },
   },
   

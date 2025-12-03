@@ -32,8 +32,8 @@ export const projectsConfig = {
     {
       title: "Portfolio Website",
       description:
-        "A modern, responsive portfolio website built with Gatsby and styled-components. Features smooth animations and SEO optimization for better visibility.",
-      technologies: ["Gatsby", "Styled-components", "GraphQL", "Netlify"],
+        "A modern, responsive portfolio website built with Astro and styled-components. Features smooth animations and SEO optimization for better visibility.",
+      technologies: ["Astro", "Styled-components", "TypeScript", "Netlify"],
       liveLink: "#",
       githubLink: "#",
     },

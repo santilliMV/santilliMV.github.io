@@ -2,7 +2,7 @@
 title: "Strategic Business Planning for 2025: A Comprehensive Guide"
 date: "6/26/2025"
 author: "Someone"
-tags: ["Gatsby", "React"]
+tags: ["Astro", "React"]
 readTime: "4 min read"
 ---
 

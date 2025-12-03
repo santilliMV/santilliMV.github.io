@@ -2,7 +2,7 @@
 title: "SpaceX Mars Mission Update"
 date: "6/27/2025"
 author: "Someone"
-tags: ["Gatsby"]
+tags: ["Astro"]
 readTime: "2 min read"
 ---
 

@@ -29,7 +29,7 @@ const { Content } = await post.render();
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
-    <title>{post.data.title} - WordPress Gatsby Blog</title>
+    <title>{post.data.title} - Astro Blog</title>
     <script>
       // Disable browser scroll restoration and ensure page starts at top
       if ("scrollRestoration" in history) {
@@ -56,12 +56,13 @@ const { Content } = await post.render();
             )
           }
           <div class="post-detail-meta">
-            <img
-              src="/image/20943608.jpeg"
-              alt={post.data.author || "Someone"}
-              class="post-detail-avatar"
-            />
+            <a href="/posts" class="post-back-button"> ← Back to Posts </a>
             <div class="post-detail-meta-info">
+              <img
+                src="/image/20943608.jpeg"
+                alt={post.data.author || "Someone"}
+                class="post-detail-avatar"
+              />
               <span class="post-detail-author"
                 >{post.data.author || "Someone"}</span
               >
