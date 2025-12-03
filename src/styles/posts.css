@@ -269,9 +269,13 @@
 
 .post-arrow {
   font-size: 1.2rem;
-  color: #a0aec0;
+  color: #76cfc5;
   line-height: 1;
-  transition: transform 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.post-item.expanded .post-arrow {
+  color: #ffb400;
 }
 
 .post-details {
