@@ -15,6 +15,28 @@ import Footer from "../components/Footer.astro";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <title>Astro Blog</title>
+    <style>
+      .video-section {
+        width: 100%;
+        padding: 3rem 1rem;
+        background: linear-gradient(135deg, #0f1724 0%, #1a2438 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .video-wrapper {
+        width: 100%;
+        max-width: 700px;
+      }
+      .video-wrapper iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      }
+    </style>
     <script>
       // Disable browser scroll restoration and ensure page starts at top
       if ("scrollRestoration" in history) {
@@ -28,6 +50,15 @@ import Footer from "../components/Footer.astro";
     <Navigation />
     <HeroSection />
     <AboutSection />
+    <!-- YouTube Video Section -->
+    <section class="video-section">
+      <div class="video-wrapper">
+        <iframe 
+          src="https://www.youtube.com/embed/1CtVLuGevH0" 
+          allowfullscreen="">
+        </iframe>
+      </div>
+    </section>
     <Footer />
     <script>
       // Ensure scroll position is at top after DOM loads

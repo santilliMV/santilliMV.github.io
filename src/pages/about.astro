@@ -10,18 +10,25 @@ import "../styles/home.css";
     <meta name="generator" content={Astro.generator} />
     <title>Sobre mí - Santiago Muñoz Villate</title>
     <style>
-      .video-container {
+      .video-section {
+        width: 100%;
+        padding: 3rem 1rem;
+        background: linear-gradient(135deg, #0f1724 0%, #1a2438 100%);
         display: flex;
         justify-content: center;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        align-items: center;
       }
-      .video-container iframe {
+      .video-wrapper {
         width: 100%;
-        max-width: 560px;
-        height: 315px;
-        border-radius: 8px;
+        max-width: 700px;
+      }
+      .video-wrapper iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
         border: none;
+        border-radius: 12px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.3);
       }
     </style>
   </head>
@@ -45,18 +52,16 @@ import "../styles/home.css";
           Hola, soy Santiago Muñoz Villate, estudiante de Ingeniería de sistemas.
           Comparto proyectos y aprendizajes sobre desarrollo web y tecnología.
         </p>
-        <!-- YouTube Video Embed -->
-        <div class="video-container">
-          <iframe 
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0" 
-            width="560" 
-            height="315"
-            border="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
-            allowfullscreen>
-          </iframe>
-        </div>
+      </div>
+    </section>
+
+    <!-- YouTube Video Section -->
+    <section class="video-section">
+      <div class="video-wrapper">
+        <iframe 
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1" 
+          allowfullscreen="">
+        </iframe>
       </div>
     </section>
 
