@@ -9,6 +9,9 @@ export const postImages: Record<string, string> = {
   "business-template-strategic-planning-framework": "/images/posts/icons-6931458_640.png",
   "strategic-business-planning-for-2025": "/images/posts/cloud-3331240_640.png",
   "the-rise-of-ai-powered-development-tools-in-2025": "/images/posts/man-1459246_640.png",
+  "avion-modelado": "/image/Avion.png",
+  "biblioteca-modelado": "/image/biblioteca.png",
+  "hospital-modelado": "/image/hospital.jpeg",
 };
 
 // Default image for posts without specific image

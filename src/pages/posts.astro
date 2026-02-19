@@ -88,7 +88,7 @@ const posts = await Promise.all(
       // Clear tags for all posts so categories remain empty as requested
       tags: post.data.tags || [],
       excerpt: excerpt,
-      readTime: post.data.readTime || "5 min read",
+      readTime: post.data.readTime || "",
       slug: slug,
       image: image,
     };
@@ -175,35 +175,64 @@ posts.forEach((p) => {
             categories.map((cat) => (
               <section class="category-section" id={`cat-${cat}`}>
                 <h2 class="category-title">{cat === 'modelado' ? 'Modelado' : cat === 'normalizacion' ? 'Normalización' : cat === 'sql' ? 'SQL' : 'Proyecto'}</h2>
-                <div class="category-card">
-                  {postsByCategory[cat] && postsByCategory[cat].length > 0 ? (
-                    postsByCategory[cat].map((post) => (
-                      <article class="post-item" data-post-id={post.slug}>
-                        <div class="post-summary">
-                          <h3 class="post-title">
-                            <a href={`/posts/${post.slug}`} class="post-title-link">{post.title}</a>
-                          </h3>
-                        </div>
-                        <div class="post-details">
-                          <div class="post-content-wrapper">
-                            <div class="post-excerpt-wrapper">
-                              <p class="post-excerpt">{post.excerpt}</p>
-                              <div class="post-footer">
-                                <a href={`/posts/${post.slug}`} class="post-read-more">Leer más →</a>
-                                <span class="post-read-time">⏱️ {post.readTime}</span>
+                
+                {cat === 'modelado' ? (
+                  // Galería bonita para Modelado
+                  <div class="gallery-grid">
+                    {postsByCategory[cat] && postsByCategory[cat].length > 0 ? (
+                      postsByCategory[cat].map((post) => (
+                        <article class="gallery-item" data-post-id={post.slug}>
+                          <a href={`/posts/${post.slug}`} class="gallery-link">
+                            <div class="gallery-image-wrapper">
+                              <img src={post.image} alt={post.title} class="gallery-image" />
+                              <div class="gallery-overlay">
+                                <h3 class="gallery-title">{post.title}</h3>
+                                <p class="gallery-subtitle">Ver más →</p>
                               </div>
                             </div>
-                            <div class="post-image-container">
-                              <img src={post.image} alt={post.title} class="post-image" />
+                            <div class="gallery-info">
+                              <h4>{post.title}</h4>
+                              <p class="gallery-read-time"> {post.readTime}</p>
+                            </div>
+                          </a>
+                        </article>
+                      ))
+                    ) : (
+                      <div class="empty-category">Próximamente habrá información aquí..</div>
+                    )}
+                  </div>
+                ) : (
+                  // Posts normales para otras categorías
+                  <div class="category-card">
+                    {postsByCategory[cat] && postsByCategory[cat].length > 0 ? (
+                      postsByCategory[cat].map((post) => (
+                        <article class="post-item" data-post-id={post.slug}>
+                          <div class="post-summary">
+                            <h3 class="post-title">
+                              <a href={`/posts/${post.slug}`} class="post-title-link">{post.title}</a>
+                            </h3>
+                          </div>
+                          <div class="post-details">
+                            <div class="post-content-wrapper">
+                              <div class="post-excerpt-wrapper">
+                                <p class="post-excerpt">{post.excerpt}</p>
+                                <div class="post-footer">
+                                  <a href={`/posts/${post.slug}`} class="post-read-more">Leer más →</a>
+                                  <span class="post-read-time"> {post.readTime}</span>
+                                </div>
+                              </div>
+                              <div class="post-image-container">
+                                <img src={post.image} alt={post.title} class="post-image" />
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </article>
-                    ))
-                  ) : (
-                    <div class="empty-category">Próximamente habrá información aquí..</div>
-                  )}
-                </div>
+                        </article>
+                      ))
+                    ) : (
+                      <div class="empty-category">Próximamente habrá información aquí..</div>
+                    )}
+                  </div>
+                )}
               </section>
             ))
           }
